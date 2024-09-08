@@ -16,10 +16,10 @@ var font = preload("res://connection_ii/ConnectionII.otf")
 var cell_size = 128
 
 # Define a variable to toggle the visibility of the grid
-var show_grid = false
+var show_grid = true
 
 # Define a variable to toggle between square and circular grid
-var use_circular_grid = false
+var use_circular_grid = true
 
 func _ready():
 	# Initialize the grid with zeros

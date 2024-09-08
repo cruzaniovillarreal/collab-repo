@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7k31c71wbqiq"]
+[gd_scene load_steps=23 format=3 uid="uid://c7k31c71wbqiq"]
 
 [ext_resource type="Texture2D" uid="uid://b763g74u15d35" path="res://first background two planet.png" id="1_f2oon"]
 [ext_resource type="Texture2D" uid="uid://dumlbhpn48wrc" path="res://asteroids/CRC1LQ.png" id="2_6qxur"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://s1ad7axbfxjp" path="res://sprites/0.png" id="3_7en6r"]
 [ext_resource type="Texture2D" uid="uid://dtaniaow8dput" path="res://asteroids/1724811627170-fotor-bg-remover-20240827212049.png" id="3_k4ur5"]
 [ext_resource type="Script" path="res://ShipSprite2.gd" id="4_btqei"]
-[ext_resource type="Texture2D" uid="uid://borj2au72vdfi" path="res://asteroids/CR5HD.png" id="4_oxonn"]
 [ext_resource type="Texture2D" uid="uid://b7ewgxb1xmllp" path="res://iso sprites/metalic1/DMIS1.png" id="5_oook1"]
 [ext_resource type="Texture2D" uid="uid://csexeau05g7jm" path="res://asteroids/CR6LQ.png" id="5_x1yfd"]
 [ext_resource type="Texture2D" uid="uid://cl0oritxfqms7" path="res://iso sprites/metalic1/DMIS3.png" id="6_m5tt6"]
@@ -89,10 +88,6 @@ texture = ExtResource("2_6qxur")
 [node name="Sprite2D2" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
 position = Vector2(1872, 3303)
 texture = ExtResource("3_k4ur5")
-
-[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
-position = Vector2(2702, 228)
-texture = ExtResource("4_oxonn")
 
 [node name="Sprite2D4" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
 position = Vector2(2705, -2233)
