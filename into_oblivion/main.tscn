@@ -1,0 +1,160 @@
+[gd_scene load_steps=24 format=3 uid="uid://c7k31c71wbqiq"]
+
+[ext_resource type="Texture2D" uid="uid://b763g74u15d35" path="res://first background two planet.png" id="1_f2oon"]
+[ext_resource type="Texture2D" uid="uid://dumlbhpn48wrc" path="res://asteroids/CRC1LQ.png" id="2_6qxur"]
+[ext_resource type="Script" path="res://BGR.gd" id="2_baipl"]
+[ext_resource type="Script" path="res://ship2.gd" id="2_fv47p"]
+[ext_resource type="Texture2D" uid="uid://s1ad7axbfxjp" path="res://sprites/0.png" id="3_7en6r"]
+[ext_resource type="Texture2D" uid="uid://dtaniaow8dput" path="res://asteroids/1724811627170-fotor-bg-remover-20240827212049.png" id="3_k4ur5"]
+[ext_resource type="Script" path="res://ShipSprite2.gd" id="4_btqei"]
+[ext_resource type="Texture2D" uid="uid://borj2au72vdfi" path="res://asteroids/CR5HD.png" id="4_oxonn"]
+[ext_resource type="Texture2D" uid="uid://b7ewgxb1xmllp" path="res://iso sprites/metalic1/DMIS1.png" id="5_oook1"]
+[ext_resource type="Texture2D" uid="uid://csexeau05g7jm" path="res://asteroids/CR6LQ.png" id="5_x1yfd"]
+[ext_resource type="Texture2D" uid="uid://cl0oritxfqms7" path="res://iso sprites/metalic1/DMIS3.png" id="6_m5tt6"]
+[ext_resource type="Texture2D" uid="uid://bymvfqn5x4xqs" path="res://asteroids/1724812287463-fotor-bg-remover-20240827213144.png" id="6_qr6rs"]
+[ext_resource type="Texture2D" uid="uid://dfyhxbpyja1iq" path="res://asteroids/fotor-20240827212926.png" id="7_ha5do"]
+[ext_resource type="Texture2D" uid="uid://rjwkkwbh8p02" path="res://iso sprites/metalic1/DMIS4.png" id="7_otg7t"]
+[ext_resource type="Texture2D" uid="uid://bko8jtwkgotj5" path="res://iso sprites/metalic1/DMIS5.png" id="8_mml65"]
+[ext_resource type="Texture2D" uid="uid://hl5oqe72ed3" path="res://iso sprites/metalic1/DMIS6.png" id="9_f0isa"]
+[ext_resource type="Texture2D" uid="uid://c83qthq2f5ghe" path="res://iso sprites/metalic1/DMIS7.png" id="10_rnb6b"]
+[ext_resource type="Texture2D" uid="uid://copxh6ok8r2si" path="res://iso sprites/metalic1/DMIS8.png" id="11_7d1jk"]
+[ext_resource type="Script" path="res://mob_1.gd" id="11_h0q4k"]
+[ext_resource type="Texture2D" uid="uid://dlxyse5gnjwq7" path="res://iso sprites/metalic1/DMIS9.png" id="12_pqewb"]
+
+[sub_resource type="GDScript" id="GDScript_8vh5c"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sv26m"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 3.5,
+"texture": ExtResource("5_oook1")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_m5tt6")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_otg7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mml65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f0isa")
+}, {
+"duration": 1.3,
+"texture": ExtResource("10_rnb6b")
+}, {
+"duration": 0.2,
+"texture": ExtResource("11_7d1jk")
+}, {
+"duration": 0.3,
+"texture": ExtResource("12_pqewb")
+}],
+"loop": true,
+"name": &"iso sprite",
+"speed": 25.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cwiv2"]
+radius = 12.3176
+
+[node name="Main" type="Node2D"]
+
+[node name="CIS" type="Node" parent="."]
+script = SubResource("GDScript_8vh5c")
+
+[node name="Parallax2D" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer"]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_f2oon")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D"]
+motion_scale = Vector2(0.75, 0.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+position = Vector2(-3498, -2714)
+rotation = -1.69471
+scale = Vector2(0.775, 0.775)
+texture = ExtResource("2_6qxur")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+position = Vector2(1872, 3303)
+texture = ExtResource("3_k4ur5")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+position = Vector2(2702, 228)
+texture = ExtResource("4_oxonn")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+position = Vector2(2705, -2233)
+texture = ExtResource("5_x1yfd")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+position = Vector2(-4170, -4111)
+rotation = 0.750492
+scale = Vector2(0.635, 0.635)
+texture = ExtResource("6_qr6rs")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+position = Vector2(237, 2242)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("7_ha5do")
+
+[node name="Player" type="Node2D" parent="."]
+z_as_relative = false
+scale = Vector2(0.104, 0.1)
+script = ExtResource("2_fv47p")
+
+[node name="Sprite" type="Sprite2D" parent="Player"]
+scale = Vector2(3, 3)
+texture = ExtResource("3_7en6r")
+region_filter_clip_enabled = true
+script = ExtResource("4_btqei")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1.90735e-06, 0)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 6.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Player"]
+scale = Vector2(356.202, 370.45)
+amount = 7000
+lifetime = 15.0
+randomness = 0.5
+lifetime_randomness = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(90, 90)
+direction = Vector2(3, 0)
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 0.25
+initial_velocity_max = 1.0
+color = Color(1, 1, 1, 0.823529)
+
+[node name="Mob1" type="RigidBody2D" parent="."]
+position = Vector2(-600, -480)
+script = ExtResource("11_h0q4k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mob1"]
+scale = Vector2(0.235, 0.235)
+sprite_frames = SubResource("SpriteFrames_sv26m")
+animation = &"iso sprite"
+autoplay = "iso sprite"
+frame_progress = 0.112803
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob1"]
+scale = Vector2(6.905, 6.905)
+shape = SubResource("CircleShape2D_cwiv2")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_baipl")

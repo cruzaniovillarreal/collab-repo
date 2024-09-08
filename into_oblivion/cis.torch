@@ -1,0 +1,139 @@
+[orchestration type="OScript" load_steps=7 format=3 uid="uid://crvqops2vnwc0"]
+
+[obj type="OScriptGraph" id="OScriptGraph_py5yo"]
+graph_name = &"EventGraph"
+offset = Vector2(-150.263, -60.1052)
+zoom = 0.751315
+flags = 8
+nodes = Array[int]([0, 1, 2, 3, 4])
+
+[obj type="OScriptNodeChance" id="OScriptNodeChance_x4faj"]
+chance = 8
+id = 0
+size = Vector2(129, 87)
+position = Vector2(480, -60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"Within",
+"dir": 1,
+"flags": 516,
+"label": "8%"
+}, {
+"pin_name": &"Outside",
+"dir": 1,
+"flags": 516,
+"label": "92%"
+}])
+
+[obj type="OScriptNodeEmitMemberSignal" id="OScriptNodeEmitMemberSignal_p8yhd"]
+target_class = "Node"
+method = {
+"name": &"ready",
+"return": {
+"name": &"",
+"type": 0,
+"class_name": &"",
+"hint": 0,
+"hint_string": "",
+"usage": 6
+},
+"flags": 1,
+"default_args": [],
+"args": []
+}
+id = 1
+size = Vector2(185, 87)
+position = Vector2(-200, -80)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"target",
+"type": 24,
+"flags": 2050,
+"label": "Node (Emitter)",
+"target_class": "Node"
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeChance" id="OScriptNodeChance_dgtiw"]
+chance = 8
+id = 2
+size = Vector2(129, 87)
+position = Vector2(500, 80)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"Within",
+"dir": 1,
+"flags": 516,
+"label": "8%"
+}, {
+"pin_name": &"Outside",
+"dir": 1,
+"flags": 516,
+"label": "92%"
+}])
+
+[obj type="OScriptNodeDelay" id="OScriptNodeDelay_3iko6"]
+id = 3
+size = Vector2(148, 87)
+position = Vector2(160, -20)
+pin_data = Array[Dictionary]([{
+"pin_name": &"ExecIn",
+"flags": 4
+}, {
+"pin_name": &"duration",
+"type": 3,
+"flags": 2,
+"dv": 1.0
+}, {
+"pin_name": &"ExecOut",
+"dir": 1,
+"flags": 4
+}])
+
+[obj type="OScriptNodeCallBuiltinFunction" id="OScriptNodeCallBuiltinFunction_h2mok"]
+function_name = &"randf_range"
+method = {
+"name": &"randf_range",
+"return": {
+"type": 3
+},
+"args": [{
+"name": &"from",
+"type": 3
+}, {
+"name": &"to",
+"type": 3
+}]
+}
+id = 4
+size = Vector2(170, 93)
+position = Vector2(-200, 60)
+pin_data = Array[Dictionary]([{
+"pin_name": &"from",
+"type": 3,
+"flags": 2
+}, {
+"pin_name": &"to",
+"type": 3,
+"flags": 2
+}, {
+"pin_name": &"return_value",
+"type": 3,
+"dir": 1,
+"flags": 1026
+}])
+
+[resource]
+base_type = &"Node"
+connections = Array[int]([1, 0, 3, 0, 4, 0, 3, 1])
+nodes = Array[OScriptNode]([SubResource("OScriptNodeChance_x4faj"), SubResource("OScriptNodeEmitMemberSignal_p8yhd"), SubResource("OScriptNodeChance_dgtiw"), SubResource("OScriptNodeDelay_3iko6"), SubResource("OScriptNodeCallBuiltinFunction_h2mok")])
+graphs = Array[OScriptGraph]([SubResource("OScriptGraph_py5yo")])

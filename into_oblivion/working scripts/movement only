@@ -1,0 +1,26 @@
+extends Sprite2D
+
+var target_position = Vector2()
+var is_following_mouse = false
+
+func _ready():
+	target_position = position
+
+func _process(delta):
+	if is_following_mouse:
+		target_position = get_global_mouse_position()
+	
+	var direction = (target_position - position).normalized()
+	var speed = 200  # Adjust the speed as needed
+	position += direction * speed * delta
+
+func _input(event):
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			if event.pressed:
+				is_following_mouse = true
+				target_position = event.position
+			else:
+				is_following_mouse = false
+
+# ^^^ the above program allows movement and works well.
